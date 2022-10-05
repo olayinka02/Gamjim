@@ -1,3 +1,5 @@
+
+
 .navbar .navbar-nav .nav-link {
     color: #000000;
     font-size: 1.1em;
@@ -11,6 +13,8 @@
 
 .landingbody{
     width:100%;
+    padding-left:0;
+    padding-right:0;
     height: auto !important;
     background-image: url("./images/landingbg.png"); /* The image used */
     background-color: #1e1e1e; /* Used if the image is unavailable */
@@ -100,9 +104,10 @@
     font-weight:500;
     margin-left:0rem;
     margin-right:0rem;
+    padding-left:0;
     color: #060303;
     -webkit-text-stroke: 1px #FE0000;
-    text-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 2px 6px #FE0000;
     animation: mymove 4s infinite;
     animation-timing-function: linear;
     /* text-shadow:
@@ -115,10 +120,15 @@
 
 @keyframes mymove {
     from {
-        -webkit-text-stroke: 1px #FE0000;}
+        -webkit-text-stroke: 1px #FE0000;
+        text-shadow: 0px 2px 6px #FE0000;
+      }
+       
 
     to {left: 200px;
-        -webkit-text-stroke: 1px #2E782D;}
+        -webkit-text-stroke: 1px #2E782D;
+        text-shadow: 0px 2px 6px #2E782D;
+      }
   }
 
   .Gamjilogo:hover{
@@ -141,7 +151,9 @@
   }
   .welcomepart{
     width:100%;
-    padding-top:7rem;
+    padding-top:3rem;
+    padding-left:7%;
+    padding-right:7%;
     height: auto !important;
     background-color: #343434;
     background-image: url('./images/secondbg.svg'); /* The image used */
@@ -154,10 +166,37 @@
     color: whitesmoke;
   }
 
- 
-  
-
-
+  .loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 4px solid #FFF;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  .loader::after {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border-left: 4px solid #FF3D00;
+    border-bottom: 4px solid transparent;
+    animation: rotation 0.5s linear infinite reverse;
+  }
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
 
 
 
@@ -175,8 +214,8 @@
     .Gamjilogo{
         font-size: 50px;
         font-family: 'Redressed', cursive;
-        margin-left:3rem;
-        margin-right:3rem;
+        margin-left:0rem;
+        margin-right:0rem;
         color: #060303;
         -webkit-text-stroke: 1px #FE0000;
         text-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25);
